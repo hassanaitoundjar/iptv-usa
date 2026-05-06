@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
   "@type": "WebPage",
   "name": "Terms and Conditions | IPTV Smarters PRO",
   "description": "Terms of Service and Conditions for using the IPTV Smarters PRO subscription.",
-  "url": "https://yoursite.com/terms"
+  "url": "https://iptv-usa-omega.vercel.app/terms"
 }
 </script>
 
@@ -31,7 +31,7 @@ For the purposes of these Terms and Conditions:
 - **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to IPTV Smarters PRO.
 - **Device** means any device that can access the Service such as a Smart TV, Firestick, computer, cellphone, or digital tablet.
 - **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.
-- **Website** refers to IPTV Smarters PRO, accessible from [https://yoursite.com](https://yoursite.com).
+- **Website** refers to IPTV Smarters PRO, accessible from [https://iptv-usa-omega.vercel.app](https://iptv-usa-omega.vercel.app).
 - **You** means the individual accessing or using the Service.
 
 ## Acknowledgment

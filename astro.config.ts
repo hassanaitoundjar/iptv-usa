@@ -22,6 +22,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  site: 'https://iptv-usa-omega.vercel.app/',
   output: 'static',
 
   integrations: [

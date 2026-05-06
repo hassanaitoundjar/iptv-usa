@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: IPTV Smarters PRO
+  site: 'https://iptv-usa-omega.vercel.app/'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: IPTV Smarters PRO
+    template: '%s — IPTV Smarters PRO'
+  description: 'Get the #1 IPTV Smarters Pro subscription with 20,000+ live channels and 100,000+ VOD movies in 4K HD. Works on Firestick, Smart TV, Android & iPhone. Free 24h trial. From $12/month.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: IPTV Smarters PRO
     images:
-      - url: '~/assets/images/default.png'
+      - url: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1200&q=80'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@streamproiptv'
+    site: '@streamproiptv'
     cardType: summary_large_image
 
 i18n:
