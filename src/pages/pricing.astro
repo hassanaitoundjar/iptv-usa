@@ -8,236 +8,395 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'IPTV Smarters Pro Pricing Plans 2025 | From $12/Month | StreamPro IPTV',
+  description:
+    'Choose your IPTV Smarters Pro subscription plan. 1 Month $12, 3 Months $30, 6 Months $50, 12 Months $80. All plans include 20,000+ channels, 4K quality and 24/7 support. 7-day money back guarantee.',
+  canonical: 'https://yoursite.com/pricing',
+  openGraph: {
+    type: 'website',
+    url: 'https://yoursite.com/pricing',
+    title: 'IPTV Smarters Pro Pricing Plans 2025 | StreamPro IPTV',
+    description: 'Best IPTV Smarters Pro plans from $12/month. 20,000+ channels, 4K HD, free trial available.',
+    // images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    handle: '@streamproiptv',
+    site: '@streamproiptv',
+    cardType: 'summary_large_image',
+  },
 };
 ---
 
-<Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+<!-- Pricing Page Schema JSON-LD -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Product',
+        name: 'IPTV Smarters Pro Subscription',
+        description:
+          'Premium IPTV subscription with 20,000+ live channels and 100,000+ VOD movies in 4K HD quality. Fully compatible with IPTV Smarters Pro app.',
+        brand: { '@type': 'Brand', name: 'StreamPro IPTV' },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '3247',
+          bestRating: '5',
+        },
+        offers: [
+          {
+            '@type': 'Offer',
+            name: '1 Month IPTV Plan',
+            price: '12.00',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            url: 'https://yoursite.com/pricing',
+            priceValidUntil: '2026-12-31',
+          },
+          {
+            '@type': 'Offer',
+            name: '3 Months IPTV Plan',
+            price: '30.00',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            url: 'https://yoursite.com/pricing',
+            priceValidUntil: '2026-12-31',
+          },
+          {
+            '@type': 'Offer',
+            name: '6 Months IPTV Plan',
+            price: '50.00',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            url: 'https://yoursite.com/pricing',
+            priceValidUntil: '2026-12-31',
+          },
+          {
+            '@type': 'Offer',
+            name: '12 Months IPTV Plan',
+            price: '80.00',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            url: 'https://yoursite.com/pricing',
+            priceValidUntil: '2026-12-31',
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Do IPTV Smarters Pro plans come with customer support?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, all IPTV Smarters Pro subscription plans include 24/7 customer support via WhatsApp and Telegram. Our team responds within minutes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is there a free IPTV trial period?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes! We offer a free 24-hour IPTV Smarters Pro trial with full access to all 20,000+ channels and 100,000+ VOD content. No credit card required.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I upgrade my IPTV subscription plan?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, you can upgrade your IPTV Smarters Pro plan at any time. Contact our support team and we will help you switch to a longer plan.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What payment methods are accepted for IPTV subscription?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'We accept PayPal, Credit Card, Debit Card and cryptocurrency payments for all IPTV Smarters Pro subscription plans.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is there a money back guarantee?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, we offer a 7-day money back guarantee on all IPTV Smarters Pro plans. If you are not satisfied, contact support within 7 days for a full refund.',
+            },
+          },
+        ],
+      },
+    ],
+  })}
+/>
 
+<Layout metadata={metadata}>
+  <!-- ===== HERO TEXT ===== -->
   <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    tagline="IPTV SMARTERS PRO PRICING"
+    title="Simple, Transparent IPTV Pricing Plans"
+    subtitle="No hidden fees. No contracts. Cancel anytime. All plans include 20,000+ live channels, 100,000+ VOD movies in 4K HD and full IPTV Smarters Pro support."
   />
 
-  <!-- Pricing Widget ******************* -->
-
+  <!-- ===== PRICING PLANS ===== -->
   <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
+    title="Choose Your IPTV Smarters Pro Plan"
+    subtitle="The longer you subscribe, the more you save. All plans include the same premium features."
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
+        title: '1 Month',
+        subtitle: 'Perfect for trying our IPTV service',
+        price: 12,
         period: 'per month',
         items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
+          { description: '✅ 20,000+ Live Channels' },
+          { description: '✅ 100,000+ VOD Movies & Series' },
+          { description: '✅ 4K Ultra HD Quality' },
+          { description: '✅ IPTV Smarters Pro Ready' },
+          { description: '✅ EPG TV Guide Included' },
+          { description: '✅ Anti-Freeze Technology' },
+          { description: '✅ All Devices Supported' },
+          { description: '✅ 24/7 WhatsApp Support' },
+          { description: '✅ Instant Activation' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: '🛒 Order Now — $12',
+          href: 'https://wa.me/yournumber?text=I want the 1 Month IPTV Plan',
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: '3 Months',
+        subtitle: 'Save 17% vs monthly plan',
+        price: 30,
+        period: '3 months — $10/mo',
         items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
+          { description: '✅ 20,000+ Live Channels' },
+          { description: '✅ 100,000+ VOD Movies & Series' },
+          { description: '✅ 4K Ultra HD Quality' },
+          { description: '✅ IPTV Smarters Pro Ready' },
+          { description: '✅ EPG TV Guide + Catch-Up TV' },
+          { description: '✅ Anti-Freeze Technology' },
+          { description: '✅ All Devices Supported' },
+          { description: '✅ 24/7 WhatsApp & Telegram' },
+          { description: '✅ Instant Activation' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: '🛒 Order Now — $30',
+          href: 'https://wa.me/yournumber?text=I want the 3 Months IPTV Plan',
+        },
+      },
+      {
+        title: '6 Months',
+        subtitle: 'Best value — Save 31% vs monthly',
+        price: 50,
+        period: '6 months — $8.33/mo',
+        items: [
+          { description: '✅ 20,000+ Live Channels' },
+          { description: '✅ 100,000+ VOD Movies & Series' },
+          { description: '✅ 4K Ultra HD Quality' },
+          { description: '✅ IPTV Smarters Pro Ready' },
+          { description: '✅ EPG TV Guide + Catch-Up TV' },
+          { description: '✅ Anti-Freeze Technology' },
+          { description: '✅ Up to 2 Connections' },
+          { description: '✅ Priority 24/7 Support' },
+          { description: '✅ Instant Activation' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: '🛒 Order Now — $50',
+          href: 'https://wa.me/yournumber?text=I want the 6 Months IPTV Plan',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: '🔥 Most Popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: '12 Months',
+        subtitle: 'Maximum savings — Save 44% vs monthly',
+        price: 80,
+        period: '12 months — $6.67/mo',
         items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
+          { description: '✅ 20,000+ Live Channels' },
+          { description: '✅ 100,000+ VOD Movies & Series' },
+          { description: '✅ 4K Ultra HD Quality' },
+          { description: '✅ IPTV Smarters Pro Ready' },
+          { description: '✅ EPG TV Guide + Catch-Up TV' },
+          { description: '✅ Anti-Freeze Technology' },
+          { description: '✅ Up to 3 Connections' },
+          { description: '✅ VIP 24/7 Priority Support' },
+          { description: '✅ Instant Activation' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: '🛒 Order Now — $80',
+          href: 'https://wa.me/yournumber?text=I want the 12 Months IPTV Plan',
         },
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
+  <!-- ===== FEATURES — WHAT'S INCLUDED ===== -->
   <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+    title="Everything Included in Every IPTV Smarters Pro Plan"
+    subtitle="No matter which plan you choose, you get access to all premium IPTV features."
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
+        title: '20,000+ Live IPTV Channels',
+        description:
+          'Full access to 20,000+ live channels including USA, UK, Arabic, French, Spanish, German, sports, news and kids channels in HD and 4K.',
+        icon: 'tabler:device-tv',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
+        title: 'IPTV Smarters Pro Compatible',
+        description:
+          'All plans fully compatible with IPTV Smarters Pro app on Firestick, Android, iPhone, Smart TV, MAG Box, Windows and Mac.',
+        icon: 'tabler:device-desktop',
       },
       {
         title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
+        description:
+          'Pay securely via PayPal, Credit Card, Debit Card or Cryptocurrency. All transactions are 100% encrypted and protected.',
         icon: 'tabler:shield-lock',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
+        title: 'Instant Activation',
+        description:
+          'Your IPTV Smarters Pro credentials are delivered instantly after payment via email. Start streaming within minutes, 24/7.',
+        icon: 'tabler:bolt',
       },
       {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
+        title: '7-Day Money Back Guarantee',
+        description:
+          'Not satisfied? Get a full refund within 7 days of purchase — no questions asked. We stand behind our IPTV service quality.',
+        icon: 'tabler:rotate',
       },
       {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        title: '24/7 Live Support',
+        description:
+          'Dedicated support team available 24/7 via WhatsApp and Telegram. IPTV Smarters Pro setup help included with every plan.',
         icon: 'tabler:headset',
       },
     ]}
     classes={{ container: 'max-w-5xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
-
+  <!-- ===== HOW TO ORDER ===== -->
   <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
+    title="How to Get Your IPTV Smarters Pro Subscription"
+    tagline="ORDER PROCESS"
     isReversed={true}
     items={[
       {
-        title: 'Explore plans',
+        title: 'Choose Your Plan',
+        description: 'Select the IPTV Smarters Pro subscription plan that fits your needs and budget.',
         icon: 'tabler:number-1',
       },
       {
-        title: 'Select a plan',
+        title: 'Click Order Now',
+        description: 'Click the Order Now button and contact us via WhatsApp or Telegram with your chosen plan.',
         icon: 'tabler:number-2',
       },
       {
-        title: 'Sign Up / Log In',
+        title: 'Complete Payment',
+        description: 'Pay securely via PayPal, Credit Card or Cryptocurrency. Takes less than 2 minutes.',
         icon: 'tabler:number-3',
       },
       {
-        title: 'Review order',
+        title: 'Receive Credentials',
+        description: 'Get your IPTV Smarters Pro username, password and server URL by email within minutes.',
         icon: 'tabler:number-4',
       },
       {
-        title: 'Enter payment details',
+        title: 'Install IPTV Smarters Pro',
+        description: 'Download IPTV Smarters Pro on your device — Firestick, Android, iPhone, Smart TV or MAG Box.',
         icon: 'tabler:number-5',
       },
       {
-        title: 'Confirmation',
+        title: 'Enter Your Credentials',
+        description: 'Open IPTV Smarters Pro, add new user, enter your credentials and connect.',
         icon: 'tabler:number-6',
       },
       {
-        title: 'Download and start using the template(s)',
+        title: '🎉 Start Streaming!',
+        description: 'Enjoy 20,000+ live channels and 100,000+ VOD movies in stunning 4K HD quality instantly.',
         icon: 'tabler:number-7',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
+      alt: 'How to setup IPTV Smarters Pro subscription step by step 2025',
     }}
   />
 
-  <!-- FAQs Widget ******************* -->
-
+  <!-- ===== PRICING FAQs ===== -->
   <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    title="IPTV Smarters Pro Pricing FAQs"
+    subtitle="Have questions about our IPTV subscription plans? We have answers. If you need more help, contact us via WhatsApp anytime."
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: 'Do all IPTV plans come with customer support?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          'Yes, all IPTV Smarters Pro subscription plans include 24/7 customer support via WhatsApp and Telegram. Our team is available around the clock to help with setup and any issues.',
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: 'Is there a free IPTV Smarters Pro trial?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          'Yes! We offer a completely free 24-hour IPTV trial with full access to all 20,000+ channels and 100,000+ VOD movies. No credit card required. Visit our Free Trial page to get started.',
       },
       {
-        title: 'Can I switch between plans?',
+        title: 'Can I upgrade or change my IPTV subscription plan?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          'Absolutely! You can upgrade your IPTV Smarters Pro plan at any time. Simply contact our support team via WhatsApp and we will upgrade your subscription and adjust the price accordingly.',
       },
       {
-        title: 'What payment methods do you accept?',
+        title: 'What payment methods do you accept for IPTV subscriptions?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'We accept PayPal, Credit Card, Debit Card and major cryptocurrencies (Bitcoin, USDT, etc.) for all IPTV Smarters Pro plans. All payments are 100% secure and encrypted.',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: 'Are there any hidden fees in the IPTV plans?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'No hidden fees whatsoever. The price shown is exactly what you pay. Your IPTV Smarters Pro subscription covers all channels, VOD content, EPG guide, and 24/7 support.',
+      },
+      {
+        title: 'Is there a money back guarantee?',
+        description:
+          'Yes! We offer a 7-day money back guarantee on all IPTV Smarters Pro subscription plans. If you are not 100% satisfied with our service, contact us within 7 days for a full refund — no questions asked.',
+      },
+      {
+        title: 'How many devices can I use with one IPTV subscription?',
+        description:
+          'The 1 Month and 3 Month plans support 1 simultaneous connection. The 6 Month plan supports 2 connections and the 12 Month plan supports 3 connections. You can install IPTV Smarters Pro on unlimited devices but stream on the allowed connections simultaneously.',
+      },
+      {
+        title: 'How fast will I receive my IPTV Smarters Pro credentials?',
+        description:
+          'Your IPTV credentials are delivered instantly — within 5 minutes of payment confirmation. You will receive your username, password and server URL by email. Activation is available 24/7 including weekends and holidays.',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
-
+  <!-- ===== CALL TO ACTION ===== -->
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Not Sure Yet? Try IPTV Smarters Pro FREE for 24 Hours!"
+    subtitle="No credit card required. Full access to all 20,000+ channels and 100,000+ VOD movies. Join 50,000+ happy subscribers today."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: '🎬 Get Free 24h Trial',
+        href: '/free-trial',
+        icon: 'tabler:player-play',
+      },
+      {
+        text: '💬 Contact Us on WhatsApp',
+        href: 'https://wa.me/yournumber',
+        target: '_blank',
       },
     ]}
   />

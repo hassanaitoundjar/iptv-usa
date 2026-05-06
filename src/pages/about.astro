@@ -7,221 +7,325 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Us | Best IPTV Smarters Pro Provider — 20,000+ Channels & 4K Streaming',
+  description:
+    'IPTV Smarters PRO is the #1 IPTV Smarters Pro subscription service worldwide. 20,000+ live channels, 100,000+ VOD titles, 4K Ultra HD, 99.9% uptime, and 24/7 support. Start streaming today.',
+  canonical: 'https://yoursite.com/about',
+  openGraph: {
+    type: 'website',
+    url: 'https://yoursite.com/about',
+    title: 'About IPTV Smarters PRO — The #1 IPTV Smarters Pro Subscription Service',
+    description:
+      'Discover why over 50,000 subscribers trust IPTV Smarters PRO for the best IPTV Smarters Pro experience. 20K+ channels, 4K quality, zero buffering.',
+    siteName: 'IPTV Smarters PRO',
+    images: [{ url: '~/assets/images/default.png' }],
+  },
+  twitter: {
+    handle: '@streamproiptv',
+    site: '@streamproiptv',
+    cardType: 'summary_large_image',
+    title: 'About IPTV Smarters PRO | Best IPTV Smarters Pro Service',
+    description:
+      '20,000+ live channels. 100,000+ VOD. 4K Ultra HD. 99.9% uptime. The best IPTV Smarters Pro subscription on the market.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- ═══════════════════════════════════════════
+       JSON-LD SCHEMA — Rich SEO Signals
+       Targets: Organization, AboutPage, FAQPage, BreadcrumbList
+  ═══════════════════════════════════════════ -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        /* BreadcrumbList — helps Google show sitelinks */
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://yoursite.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'About IPTV Smarters PRO',
+              item: 'https://yoursite.com/about',
+            },
+          ],
+        },
 
+        /* AboutPage */
+        {
+          '@type': 'AboutPage',
+          '@id': 'https://yoursite.com/about#webpage',
+          name: 'About IPTV Smarters PRO — The Best IPTV Smarters Pro Provider',
+          description:
+            "IPTV Smarters PRO is the world's leading IPTV Smarters Pro subscription service, offering 20,000+ live channels, 100,000+ VOD titles, 4K Ultra HD streaming, and 99.9% server uptime.",
+          url: 'https://yoursite.com/about',
+          inLanguage: 'en-US',
+          isPartOf: { '@id': 'https://yoursite.com/#website' },
+          breadcrumb: { '@id': 'https://yoursite.com/about#breadcrumb' },
+          dateModified: new Date().toISOString().split('T')[0],
+        },
+
+        /* Organization — E-E-A-T signals */
+        {
+          '@type': 'Organization',
+          '@id': 'https://yoursite.com/#organization',
+          name: 'IPTV Smarters PRO',
+          alternateName: 'IPTV Smarters Pro',
+          url: 'https://yoursite.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://yoursite.com/logo.png',
+            width: 200,
+            height: 60,
+          },
+          description:
+            'IPTV Smarters PRO provides premium IPTV Smarters Pro subscriptions with 20,000+ live channels, 100,000+ on-demand titles, 4K Ultra HD quality, and 99.9% server uptime across 50+ global servers.',
+          foundingDate: '2020',
+          numberOfEmployees: { '@type': 'QuantitativeValue', value: 50 },
+          slogan: 'Stream Smarter. Stream Better.',
+          contactPoint: [
+            {
+              '@type': 'ContactPoint',
+              contactType: 'customer support',
+              availableLanguage: ['English', 'French', 'Arabic', 'Spanish'],
+              contactOption: 'TollFree',
+              hoursAvailable: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                opens: '00:00',
+                closes: '23:59',
+              },
+            },
+          ],
+          sameAs: ['https://t.me/yourhandle', 'https://wa.me/yournumber'],
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.9',
+            reviewCount: '3200',
+            bestRating: '5',
+            worstRating: '1',
+          },
+        },
+
+        /* Service — makes the service itself indexable */
+        {
+          '@type': 'Service',
+          '@id': 'https://yoursite.com/#service',
+          name: 'IPTV Smarters Pro Subscription',
+          serviceType: 'IPTV Streaming Service',
+          provider: { '@id': 'https://yoursite.com/#organization' },
+          description:
+            'Premium IPTV Smarters Pro subscription giving access to 20,000+ live TV channels, 100,000+ VOD movies and series, sports, PPV events, and catch-up TV in 4K and Full HD.',
+          offers: {
+            '@type': 'AggregateOffer',
+            priceCurrency: 'USD',
+            lowPrice: '9.99',
+            highPrice: '59.99',
+            offerCount: '4',
+          },
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'IPTV Smarters Pro Plans',
+            itemListElement: [
+              { '@type': 'Offer', name: '1-Month Plan', price: '9.99', priceCurrency: 'USD' },
+              { '@type': 'Offer', name: '3-Month Plan', price: '19.99', priceCurrency: 'USD' },
+              { '@type': 'Offer', name: '6-Month Plan', price: '34.99', priceCurrency: 'USD' },
+              { '@type': 'Offer', name: '12-Month Plan', price: '59.99', priceCurrency: 'USD' },
+            ],
+          },
+        },
+
+        /* FAQPage — targets featured snippets */
+        {
+          '@type': 'FAQPage',
+          '@id': 'https://yoursite.com/about#faq',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What is IPTV Smarters Pro?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'IPTV Smarters Pro is a popular IPTV player application that allows users to stream live TV channels, movies, and series using an M3U playlist or Xtream Codes API. IPTV Smarters PRO provides the subscription service to activate and use within the app.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How many channels does IPTV Smarters PRO offer?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'IPTV Smarters PRO offers over 20,000 live TV channels from around the world, including sports, movies, news, kids, and adult entertainment, all in Full HD and 4K Ultra HD quality.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does IPTV Smarters PRO work on all devices?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. IPTV Smarters PRO works on Android, iOS, Smart TVs (Samsung, LG), Amazon Fire Stick, MAG devices, Apple TV, PC, Mac, and any device that supports the IPTV Smarters Pro app or M3U players.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is there a free trial for IPTV Smarters Pro?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. IPTV Smarters PRO offers a free 24-hour test line so you can try the service before purchasing any subscription plan.',
+              },
+            },
+          ],
+        },
+      ],
+    })}
+  />
+
+  <!-- ═══════════════════════════════════════════
+       HERO — Primary keyword in H1
+  ═══════════════════════════════════════════ -->
   <Hero
-    tagline="About us"
+    tagline="ABOUT IPTV SMARTERS PRO"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'IPTV Smarters Pro streaming service on multiple devices — 4K live TV channels',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      The World's #1 <br />
+      <span class="text-accent dark:text-white">IPTV Smarters Pro</span> Provider
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      IPTV Smarters PRO delivers the most complete IPTV Smarters Pro subscription on the market —
+      <strong>20,000+ live channels</strong>, <strong>100,000+ VOD titles</strong>, and
+      <strong>true 4K Ultra HD</strong> streaming with zero buffering and 99.9% server uptime, backed by 24/7 multilingual
+      support.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
+  <!-- ═══════════════════════════════════════════
+       STATS — Trust & authority signals
+  ═══════════════════════════════════════════ -->
   <Stats
-    title="Statistics about us"
+    title="Why 50,000+ Subscribers Choose IPTV Smarters PRO"
+    subtitle="Our numbers speak for themselves. Built for speed, stability, and scale."
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Global Servers', amount: '50+' },
+      { title: 'Active Subscribers', amount: '50K+' },
+      { title: 'Live TV Channels', amount: '20K+' },
+      { title: 'Server Uptime', amount: '99.9%' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
+  <!-- ═══════════════════════════════════════════
+       FEATURES3 — Keyword-rich feature copy
+  ═══════════════════════════════════════════ -->
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="What Makes IPTV Smarters PRO the Best IPTV Service"
+    subtitle="We engineered every part of our IPTV Smarters Pro infrastructure for one goal: a flawless streaming experience on every device, every time."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Anti-Freeze & Anti-Buffer Technology',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Our proprietary load-balancing servers distribute traffic intelligently across 50+ global nodes, eliminating freezing and buffering even during peak sports events and PPV broadcasts.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Interior Design',
+        title: '4K Ultra HD & Full HD Channels',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Stream thousands of IPTV Smarters Pro channels in true 4K UHD and 1080p Full HD. Compatible with all major IPTV players including IPTV Smarters Pro, TiviMate, GSE IPTV, and VLC.',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Photography',
+        title: '100,000+ VOD Movies & Series',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Beyond live TV, enjoy an ever-growing on-demand library of over 100,000 movies and TV series, updated daily with the latest releases — all included in every IPTV Smarters Pro plan.',
+        icon: 'tabler:movie',
+      },
+      {
+        title: 'Works on All Devices',
+        description:
+          'IPTV Smarters PRO is fully compatible with Android, iOS, Samsung Smart TV, LG TV, Amazon Fire Stick, Apple TV, MAG Box, PC, and Mac — one subscription, all your screens.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Sports, PPV & Premium Channels',
+        description:
+          'Never miss a match. Access premium sports packages including NFL, NBA, Premier League, UFC, WWE, and Pay-Per-View events — all in HD via your IPTV Smarters Pro subscription.',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'EPG Electronic Program Guide',
+        description:
+          'Full 7-day EPG (TV Guide) is included with all IPTV Smarters Pro plans, so you always know what is on and never miss your favorite shows.',
+        icon: 'tabler:calendar',
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
+  <!-- ═══════════════════════════════════════════
+       STEPS2 — E-E-A-T core values copy
+  ═══════════════════════════════════════════ -->
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Our Core Values at IPTV Smarters PRO"
+    subtitle="We are not just an IPTV provider — we are a streaming partner committed to quality, reliability, and your total satisfaction."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Customer-First IPTV Experience',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'Every IPTV Smarters Pro plan comes with 24/7 live technical support, instant activation, and a 7-day money-back guarantee. Your satisfaction is our number one priority.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Constantly Upgraded Infrastructure',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'We invest continuously in our server network, codec optimization, and channel list updates — so your IPTV Smarters Pro subscription gets faster and better over time, not slower.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Total Transparency — No Hidden Fees',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'No contracts. No throttling. No surprise charges. What you see on our pricing page is exactly what you pay for your IPTV Smarters Pro subscription — period.',
+      },
+      {
+        title: 'Multi-Language & Global Coverage',
+        description:
+          'IPTV Smarters PRO serves customers worldwide with channels and support in English, French, Arabic, Spanish, and more. Truly global IPTV coverage for every audience.',
       },
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
+  <!-- ═══════════════════════════════════════════
+       FEATURES2 — Support CTA with keywords
+  ═══════════════════════════════════════════ -->
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="24/7 IPTV Smarters Pro Support — We Are Always Here"
+    tagline="DEDICATED CUSTOMER SUPPORT"
+    subtitle="Whether you need help setting up IPTV Smarters Pro on your device or troubleshooting a connection issue, our expert team responds fast — day or night."
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Instant Help on WhatsApp',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'Get real-time IPTV Smarters Pro setup assistance, M3U configuration help, and troubleshooting support directly from our technical team on WhatsApp — typically within minutes.',
+        icon: 'tabler:brand-whatsapp',
       },
       {
-        title: 'Call us',
+        title: 'Support & Updates on Telegram',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Join our Telegram channel for live server status updates, new channel announcements, IPTV Smarters Pro setup guides, and direct one-on-one customer support.',
+        icon: 'tabler:brand-telegram',
       },
     ]}
   />

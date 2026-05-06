@@ -3,76 +3,275 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact IPTV Smarters Pro Support 24/7 | WhatsApp & Telegram | StreamPro IPTV',
+  description:
+    'Need help with your IPTV Smarters Pro subscription? Contact our 24/7 support team via WhatsApp, Telegram or email. Setup help, billing questions and technical support. Response within 1 hour.',
+  canonical: 'https://yoursite.com/contact',
+  openGraph: {
+    type: 'website',
+    url: 'https://yoursite.com/contact',
+    title: 'Contact IPTV Smarters Pro Support 24/7 | StreamPro IPTV',
+    description:
+      '24/7 IPTV support via WhatsApp, Telegram and email. Setup help, billing and technical support. Response within 1 hour.',
+    // images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    handle: '@streamproiptv',
+    site: '@streamproiptv',
+    cardType: 'summary_large_image',
+  },
 };
 ---
 
+<!-- JSON-LD Schema Markup for SEO -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ContactPage',
+        name: 'Contact StreamPro IPTV Smarters Pro Support',
+        description:
+          '24/7 customer service and technical support for IPTV Smarters Pro subscribers via WhatsApp, Telegram and email.',
+        url: 'https://yoursite.com/contact',
+        mainEntity: {
+          '@type': 'Organization',
+          name: 'StreamPro IPTV',
+          url: 'https://yoursite.com',
+          logo: 'https://yoursite.com/logo.png',
+          contactPoint: [
+            {
+              '@type': 'ContactPoint',
+              contactType: 'customer support',
+              availableLanguage: ['English', 'French', 'Arabic', 'Spanish', 'German'],
+              contactOption: 'TollFree',
+              hoursAvailable: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                opens: '00:00',
+                closes: '23:59',
+              },
+            },
+            {
+              '@type': 'ContactPoint',
+              contactType: 'technical support',
+              availableLanguage: ['English', 'French', 'Arabic'],
+              contactOption: 'TollFree',
+            },
+            {
+              '@type': 'ContactPoint',
+              contactType: 'billing support',
+              availableLanguage: ['English'],
+            },
+          ],
+          sameAs: ['https://t.me/streampro_support', 'https://wa.me/yournumber'],
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'How fast does IPTV Smarters Pro support respond?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Our IPTV Smarters Pro support team responds within 1 hour via WhatsApp and Telegram, 24 hours a day, 7 days a week including weekends and holidays.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I contact IPTV Smarters Pro support?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can contact StreamPro IPTV support via WhatsApp at +1 (555) 123-4567, Telegram at @streampro_support, or by email at support@streamproiptv.com. Support is available 24/7.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can support help me setup IPTV Smarters Pro on my device?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes! Our technical support team provides full IPTV Smarters Pro setup assistance for Firestick, Android, iPhone, Smart TV, MAG Box, Windows and Mac — completely free for all subscribers.',
+            },
+          },
+        ],
+      },
+    ],
+  })}
+/>
+
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- ===== HERO ===== -->
+  <HeroText
+    tagline="CONTACT SUPPORT"
+    title="We're Here to Help You 24/7"
+    subtitle="Get instant help from our IPTV Smarters Pro support team. Setup assistance, billing questions, technical issues — we've got you covered around the clock."
+  />
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <!-- ===== RESPONSE TIME TRUST BAR ===== -->
+  <Note
+    title="⚡ Average Response Time: Under 1 Hour"
+    description="| 💬 WhatsApp Support | 📱 Telegram Support | 📧 Email Support | 🌍 Support in English, French, Arabic & Spanish"
+  />
 
+  <!-- ===== DIRECT CONTACT CHANNELS ===== -->
+  <Features2
+    title="Reach Our IPTV Smarters Pro Support Team Instantly"
+    subtitle="Choose the fastest contact method for you. WhatsApp and Telegram get the quickest response — usually within minutes."
+    items={[
+      {
+        title: '💬 WhatsApp Support',
+        description:
+          'The fastest way to reach us. Send a WhatsApp message anytime — day or night. We reply within minutes for urgent IPTV Smarters Pro issues. Click to chat now.',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: '📱 Telegram Support',
+        description:
+          'Join our Telegram support channel @streampro_support for instant help, service announcements and IPTV Smarters Pro update notifications.',
+        icon: 'tabler:brand-telegram',
+      },
+      {
+        title: '📧 Email Support',
+        description:
+          'Send detailed questions to support@streamproiptv.com. Best for billing inquiries, subscription changes and non-urgent technical questions. Response within 2 hours.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: '🔧 Technical Support',
+        description:
+          'Buffering issues? App not loading? Server connection problems? Our IPTV technical team provides step-by-step troubleshooting for all devices and issues.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: '💳 Sales & Billing',
+        description:
+          'Questions about subscription plans, payment methods, renewals, upgrades or refunds? Our billing team handles all financial and account-related questions.',
+        icon: 'tabler:credit-card',
+      },
+      {
+        title: '📺 Channel Requests',
+        description:
+          'Missing a channel from our lineup? Submit a channel request and our engineers will work on adding it. We regularly update our 20,000+ channel list.',
+        icon: 'tabler:device-tv',
+      },
+    ]}
+  />
+
+  <!-- ===== CONTACT FORM ===== -->
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send Us a Message"
+    subtitle="Fill out the form below and our IPTV Smarters Pro support team will respond within 1 hour. For the fastest response, use WhatsApp or Telegram directly."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Full Name',
+        placeholder: 'Your full name',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Email Address',
+        placeholder: 'your@email.com',
+      },
+      {
+        type: 'text',
+        name: 'device',
+        label: 'Your Device',
+        placeholder: 'e.g. Firestick, Samsung Smart TV, Android, iPhone...',
+      },
+      {
+        type: 'text',
+        name: 'plan',
+        label: 'Your Subscription Plan (if applicable)',
+        placeholder: 'e.g. 1 Month, 6 Months, Free Trial...',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'How Can We Help You?',
+      placeholder:
+        'Describe your issue or question in detail. For setup help, mention your device model and what step you are stuck on...',
+      rows: 6,
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this form you agree to our Privacy Policy. We will never share your information with third parties. Your data is 100% secure.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="⚡ Our support team typically responds within 1 hour — 24 hours a day, 7 days a week."
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- ===== SETUP SUPPORT SECTION ===== -->
   <Features2
-    title="We are here to help!"
+    title="Free Setup Help for All Devices"
+    subtitle="Our support team provides free IPTV Smarters Pro installation help on every device — included with every subscription plan."
+    tagline="FREE SETUP SUPPORT"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
+        title: 'Amazon Firestick & Fire TV',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'We guide you step-by-step through installing and configuring IPTV Smarters Pro on your Firestick or Fire TV in under 5 minutes.',
+        icon: 'tabler:brand-amazon',
       },
       {
-        title: 'Technical support',
+        title: 'Android Phone & TV Box',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Full setup assistance for IPTV Smarters Pro on Android smartphones, tablets and Android TV boxes via Google Play Store.',
+        icon: 'tabler:brand-android',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'iPhone & iPad (iOS)',
+        description:
+          'Complete iOS setup guide for IPTV Smarters Pro on iPhone and iPad. We walk you through the App Store installation and configuration.',
+        icon: 'tabler:brand-apple',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
+        title: 'Samsung & LG Smart TV',
+        description:
+          'Smart TV setup support for Samsung Tizen and LG webOS. Our team helps you configure IPTV Smarters Pro on your big screen TV.',
+        icon: 'tabler:device-tv',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'MAG Box & Enigma2',
+        description:
+          'Expert support for MAG 250, 254, 256, 322, 324 and all Enigma2 devices. Portal URL configuration and full technical assistance.',
+        icon: 'tabler:device-gamepad',
+      },
+      {
+        title: 'Windows PC & Mac',
+        description:
+          'Setup IPTV Smarters Pro on your Windows 10/11 PC or macOS computer. We also support VLC Media Player and Kodi M3U configuration.',
+        icon: 'tabler:device-desktop',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- ===== CALL TO ACTION ===== -->
+  <CallToAction
+    title="Still Have Questions? We're Just a Message Away!"
+    subtitle="Our IPTV Smarters Pro support team is online right now. Contact us on WhatsApp for an instant response — available 24/7 including weekends."
+    actions={[
+      {
+        variant: 'primary',
+        text: '💬 Chat on WhatsApp Now',
+        href: 'https://wa.me/yournumber?text=Hi, I need help with IPTV Smarters Pro',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        text: '📱 Message on Telegram',
+        href: 'https://t.me/streampro_support',
+        target: '_blank',
       },
     ]}
   />

@@ -28,8 +28,9 @@ const {
     defaultIcon={defaultIcon}
     classes={{
       container: '',
+      panel: 'max-w-full sm:max-w-md p-6 bg-white dark:bg-[#0a0a0f] rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-b-4 border-transparent hover:border-[#e50914]',
       title: 'md:text-[1.3rem]',
-      icon: 'text-white bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4 rtl:ml-4 rtl:mr-0',
+      icon: 'text-white bg-[#e50914] rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4 rtl:ml-4 rtl:mr-0',
       ...((classes?.items as Record<string, never>) ?? {}),
     }}
   />

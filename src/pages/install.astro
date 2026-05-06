@@ -1,0 +1,429 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: 'How to Install IPTV Smarters Pro on Firestick (2025 Step-by-Step Guide)',
+  description:
+    'Learn how to install IPTV Smarters Pro on Amazon Firestick in minutes. Step-by-step guide covering sideloading, Downloader app, and M3U setup for IPTV Smarters PRO subscription.',
+  canonical: 'https://yoursite.com/install-iptv-smarters-pro-firestick',
+  openGraph: {
+    type: 'article',
+    url: 'https://yoursite.com/install-iptv-smarters-pro-firestick',
+    title: 'How to Install IPTV Smarters Pro on Firestick — Full 2025 Guide',
+    description:
+      'Step-by-step tutorial to install IPTV Smarters Pro on any Amazon Fire TV Stick. Works on Firestick 4K, Lite, and Fire TV Cube.',
+    siteName: 'IPTV Smarters PRO',
+    images: [{ url: '~/assets/images/default.png' }],
+  },
+  twitter: {
+    handle: '@streamproiptv',
+    site: '@streamproiptv',
+    cardType: 'summary_large_image',
+    title: 'Install IPTV Smarters Pro on Firestick — 2025 Guide',
+    description:
+      'Full step-by-step guide to sideload and set up IPTV Smarters Pro on your Amazon Firestick with your IPTV Smarters PRO subscription.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- ═══════════════════════════════════════
+       JSON-LD — HowTo + FAQPage + BreadcrumbList
+  ═══════════════════════════════════════ -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://yoursite.com' },
+            { '@type': 'ListItem', position: 2, name: 'Setup Guides', item: 'https://yoursite.com/guides' },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Install IPTV Smarters Pro on Firestick',
+              item: 'https://yoursite.com/install-iptv-smarters-pro-firestick',
+            },
+          ],
+        },
+
+        {
+          '@type': 'HowTo',
+          '@id': 'https://yoursite.com/install-iptv-smarters-pro-firestick#howto',
+          name: 'How to Install IPTV Smarters Pro on Amazon Firestick',
+          description:
+            'A complete step-by-step guide to installing the IPTV Smarters Pro app on Amazon Firestick using the Downloader app, then activating it with your IPTV Smarters PRO subscription credentials.',
+          image: 'https://yoursite.com/assets/images/default.png',
+          totalTime: 'PT10M',
+          estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+          supply: [
+            { '@type': 'HowToSupply', name: 'Amazon Firestick (any model)' },
+            { '@type': 'HowToSupply', name: 'Active IPTV Smarters PRO subscription' },
+            { '@type': 'HowToSupply', name: 'Wi-Fi internet connection' },
+          ],
+          tool: [{ '@type': 'HowToTool', name: 'Downloader app (free on Amazon App Store)' }],
+          step: [
+            {
+              '@type': 'HowToStep',
+              position: 1,
+              name: 'Enable Apps from Unknown Sources',
+              text: 'On your Firestick go to Settings → My Fire TV → Developer Options and turn on "Apps from Unknown Sources" and "ADB Debugging".',
+              url: 'https://yoursite.com/install-iptv-smarters-pro-firestick#step1',
+            },
+            {
+              '@type': 'HowToStep',
+              position: 2,
+              name: 'Install the Downloader App',
+              text: 'Press the Home button, go to the Search icon and type "Downloader". Install the free Downloader app by AFTVnews from the Amazon App Store.',
+              url: 'https://yoursite.com/install-iptv-smarters-pro-firestick#step2',
+            },
+            {
+              '@type': 'HowToStep',
+              position: 3,
+              name: 'Download IPTV Smarters Pro APK',
+              text: 'Open Downloader, go to the URL bar and enter the official IPTV Smarters Pro APK download link. Tap Go and wait for the download to complete.',
+              url: 'https://yoursite.com/install-iptv-smarters-pro-firestick#step3',
+            },
+            {
+              '@type': 'HowToStep',
+              position: 4,
+              name: 'Install the APK',
+              text: 'Once downloaded, tap Install on the prompt that appears. Wait for the installation to finish, then tap Done.',
+              url: 'https://yoursite.com/install-iptv-smarters-pro-firestick#step4',
+            },
+            {
+              '@type': 'HowToStep',
+              position: 5,
+              name: 'Open IPTV Smarters Pro and Add Your Playlist',
+              text: 'Launch IPTV Smarters Pro. Select "Login with Xtream Codes API" or "Load Your Playlist or File/URL" and enter the M3U URL, username, password, and server URL provided by IPTV Smarters PRO.',
+              url: 'https://yoursite.com/install-iptv-smarters-pro-firestick#step5',
+            },
+            {
+              '@type': 'HowToStep',
+              position: 6,
+              name: 'Start Streaming',
+              text: 'Your channels and VOD library will load automatically. Browse 20,000+ live TV channels and 100,000+ on-demand titles in 4K Ultra HD.',
+              url: 'https://yoursite.com/install-iptv-smarters-pro-firestick#step6',
+            },
+          ],
+        },
+
+        {
+          '@type': 'FAQPage',
+          '@id': 'https://yoursite.com/install-iptv-smarters-pro-firestick#faq',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'Can I install IPTV Smarters Pro on Firestick?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. IPTV Smarters Pro is not available directly on the Amazon App Store, but you can easily sideload it using the free Downloader app. The process takes less than 10 minutes and works on all Firestick models including Firestick 4K, Firestick Lite, and Fire TV Cube.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Do I need to jailbreak my Firestick to install IPTV Smarters Pro?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'No jailbreak is required. Amazon Firestick natively supports sideloading APK files by enabling "Apps from Unknown Sources" in Developer Options. This is a built-in Amazon feature and does not void your warranty.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What information do I need to set up IPTV Smarters Pro on Firestick?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'You need your IPTV Smarters PRO subscription credentials: a Server URL (portal address), a Username, and a Password. These are sent to you by email immediately after purchasing your IPTV Smarters PRO plan.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Which Firestick models are compatible with IPTV Smarters Pro?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'IPTV Smarters Pro works on all Amazon Firestick and Fire TV models: Fire TV Stick Lite, Fire TV Stick (all generations), Fire TV Stick 4K, Fire TV Stick 4K Max, Fire TV Cube, and Fire TV Edition smart TVs.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Why is IPTV Smarters Pro buffering on my Firestick?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Buffering is usually caused by a slow internet connection or an overloaded IPTV server. IPTV Smarters PRO uses 50+ global servers with anti-freeze technology to eliminate buffering. Make sure your Firestick is connected to a 2.4GHz or 5GHz Wi-Fi network with at least 25 Mbps for 4K streams.',
+              },
+            },
+          ],
+        },
+
+        {
+          '@type': 'Article',
+          '@id': 'https://yoursite.com/install-iptv-smarters-pro-firestick#article',
+          headline: 'How to Install IPTV Smarters Pro on Firestick (2025 Step-by-Step Guide)',
+          description:
+            'Complete tutorial for installing IPTV Smarters Pro on Amazon Firestick using the Downloader app and activating your IPTV Smarters PRO subscription.',
+          author: {
+            '@type': 'Organization',
+            name: 'IPTV Smarters PRO',
+            url: 'https://yoursite.com',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'IPTV Smarters PRO',
+            url: 'https://yoursite.com',
+            logo: { '@type': 'ImageObject', url: 'https://yoursite.com/logo.png' },
+          },
+          datePublished: '2025-01-01',
+          dateModified: new Date().toISOString().split('T')[0],
+          inLanguage: 'en-US',
+          mainEntityOfPage: 'https://yoursite.com/install-iptv-smarters-pro-firestick',
+        },
+      ],
+    })}
+  />
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <Hero
+    tagline="FIRESTICK SETUP GUIDE"
+    image={{
+      src: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Amazon Firestick with IPTV Smarters Pro installed showing live TV channels',
+    }}
+  >
+    <Fragment slot="title">
+      How to Install <span class="text-accent dark:text-white">IPTV Smarters Pro</span><br />
+      on Firestick — 2025 Guide
+    </Fragment>
+    <Fragment slot="subtitle">
+      Get <strong>IPTV Smarters Pro</strong> running on your Amazon Firestick in under 10 minutes. This step-by-step guide
+      covers everything — from enabling sideloading to entering your
+      <strong>IPTV Smarters PRO</strong> subscription credentials and streaming 20,000+ channels in 4K.
+    </Fragment>
+  </Hero>
+
+  <!-- ═══════════════════════════════════════
+       REQUIREMENT NOTE
+  ═══════════════════════════════════════ -->
+  <Note title="Before You Start" />
+
+  <!-- ═══════════════════════════════════════
+       STEPS — The core install guide
+  ═══════════════════════════════════════ -->
+  <Steps
+    title="How to Install IPTV Smarters Pro on Firestick"
+    subtitle="Follow these 6 steps exactly — no technical knowledge required. The entire process takes less than 10 minutes."
+    items={[
+      {
+        title: 'Step 1: Enable Apps from Unknown Sources',
+        description:
+          'On your Firestick remote press the <strong>Home</strong> button → go to <strong>Settings</strong> (top menu) → select <strong>My Fire TV</strong> → tap <strong>Developer Options</strong>. Enable both <strong>"Apps from Unknown Sources"</strong> and <strong>"ADB Debugging"</strong>. This allows you to sideload the IPTV Smarters Pro APK. Note: this is a standard Amazon feature — no jailbreak involved.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Step 2: Install the Downloader App',
+        description:
+          'Press the <strong>Home</strong> button and click the <strong>Search (magnifying glass)</strong> icon. Type <strong>"Downloader"</strong> in the search box. Select the <strong>Downloader</strong> app by AFTVnews and click <strong>Download</strong>. This free app is available directly on the Amazon App Store and is the safest way to sideload IPTV Smarters Pro on Firestick.',
+        icon: 'tabler:download',
+      },
+      {
+        title: 'Step 3: Download the IPTV Smarters Pro APK',
+        description:
+          'Open the <strong>Downloader</strong> app. In the URL / Search bar, type the IPTV Smarters Pro APK download URL (we recommend using the official link from the IPTV Smarters Pro website: <strong>iptvsmarters.com</strong>). Tap <strong>Go</strong> and wait for the download to complete — usually under 60 seconds on a normal connection.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Step 4: Install the IPTV Smarters Pro APK',
+        description:
+          'Once the APK has downloaded, a prompt will appear automatically. Tap <strong>Install</strong> and wait for the installation to finish (30–60 seconds). When done, tap <strong>Done</strong> — do NOT tap Open yet. Return to Downloader and delete the APK file to free up storage space on your Firestick.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 5: Launch IPTV Smarters Pro & Add Your Playlist',
+        description:
+          'Find <strong>IPTV Smarters Pro</strong> in your Apps list (or search for it). Open the app and tap <strong>"Login with Xtream Codes API"</strong>. Enter your <strong>IPTV Smarters PRO</strong> credentials: the <strong>Server URL</strong>, <strong>Username</strong>, and <strong>Password</strong> sent to your email after purchase. Alternatively, select <strong>"Load Your Playlist or File/URL"</strong> and paste your M3U URL. Tap <strong>Add User</strong>.',
+        icon: 'tabler:login',
+      },
+      {
+        title: 'Step 6: Start Streaming in 4K',
+        description:
+          'Your full IPTV Smarters PRO library will load automatically — <strong>20,000+ live TV channels</strong>, <strong>100,000+ VOD movies and series</strong>, full <strong>EPG TV Guide</strong>, catch-up TV, and premium sports. Browse by category, search for channels, or go directly to live sports. Enjoy buffer-free 4K streaming on your Firestick.',
+        icon: 'tabler:player-play',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1461151304267-38535e780c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      alt: 'Firestick remote and TV showing IPTV channels after installing IPTV Smarters Pro',
+    }}
+  />
+
+  <!-- ═══════════════════════════════════════
+       COMPATIBLE DEVICES
+  ═══════════════════════════════════════ -->
+  <Features2
+    title="All Firestick & Fire TV Models Supported"
+    tagline="DEVICE COMPATIBILITY"
+    subtitle="IPTV Smarters Pro works on every Amazon Fire TV device. One IPTV Smarters PRO subscription supports up to 3 simultaneous connections — watch on multiple devices at once."
+    columns={3}
+    items={[
+      {
+        title: 'Fire TV Stick Lite',
+        description:
+          'Perfect entry-level device. Install IPTV Smarters Pro on Fire TV Stick Lite for Full HD streaming at an affordable price.',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: 'Fire TV Stick (3rd Gen)',
+        description:
+          'The most popular Firestick model. Runs IPTV Smarters Pro smoothly with Full HD output and fast Wi-Fi connectivity.',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: 'Fire TV Stick 4K & 4K Max',
+        description:
+          'The best Firestick for IPTV Smarters Pro. True 4K Ultra HD, HDR10+, Dolby Vision, and Dolby Atmos audio support.',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: 'Fire TV Cube',
+        description:
+          'The most powerful Fire TV device. IPTV Smarters Pro runs flawlessly with hands-free Alexa voice control for channel switching.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Fire TV Edition Smart TVs',
+        description:
+          'Many Toshiba, Pioneer, and Insignia smart TVs run Fire TV OS natively — IPTV Smarters Pro installs the same way.',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: 'Fire TV Stick (1st & 2nd Gen)',
+        description:
+          'Older Firestick models are also supported. Install IPTV Smarters Pro the same way for Full HD streaming.',
+        icon: 'tabler:device-tv',
+      },
+    ]}
+  />
+
+  <!-- ═══════════════════════════════════════
+       TROUBLESHOOTING
+  ═══════════════════════════════════════ -->
+  <Features2
+    title="IPTV Smarters Pro Firestick Troubleshooting"
+    tagline="COMMON ISSUES & FIXES"
+    subtitle="Running into a problem? Here are the most common IPTV Smarters Pro Firestick issues and how to fix them instantly."
+    columns={2}
+    items={[
+      {
+        title: 'Buffering or Freezing',
+        description:
+          'Make sure your Wi-Fi speed is at least 10 Mbps for HD and 25 Mbps for 4K. Restart your router, move your Firestick closer to the router, or switch to a 5GHz Wi-Fi band. IPTV Smarters PRO servers use anti-freeze technology but a slow home network can still cause buffering.',
+        icon: 'tabler:wifi',
+      },
+      {
+        title: 'App Not Installing (APK Blocked)',
+        description:
+          'Go back to Settings → My Fire TV → Developer Options and confirm "Apps from Unknown Sources" is enabled. If prompted with a security warning during install, tap "Install Anyway". This is normal when sideloading any APK on Firestick.',
+        icon: 'tabler:shield-x',
+      },
+      {
+        title: 'Invalid Credentials / Cannot Connect',
+        description:
+          'Double-check the Server URL, Username, and Password sent in your IPTV Smarters PRO welcome email — copy and paste them rather than typing manually. Make sure you have an active subscription. Contact our 24/7 support on WhatsApp or Telegram for instant help.',
+        icon: 'tabler:key',
+      },
+      {
+        title: 'IPTV Smarters Pro Crashing on Firestick',
+        description:
+          'Clear the app cache: Settings → Applications → Manage Installed Applications → IPTV Smarters Pro → Clear Cache. If the issue persists, uninstall and reinstall the latest APK version. Older Firestick models (1st gen) may need a lighter IPTV player like GSE IPTV instead.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'No Channels Loading After Login',
+        description:
+          'Your playlist may still be loading for the first time — wait 60–90 seconds for a large channel list to parse. If channels still do not appear, your M3U URL or Xtream Codes credentials may have changed. Log out, re-enter your credentials, or contact IPTV Smarters PRO support.',
+        icon: 'tabler:list',
+      },
+      {
+        title: 'EPG / TV Guide Not Showing',
+        description:
+          'In IPTV Smarters Pro go to Settings → EPG Settings and make sure your EPG URL is filled in (your IPTV Smarters PRO credentials include EPG automatically). Force a manual EPG refresh. EPG data can take 2–5 minutes to fully load after a fresh install.',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  />
+
+  <!-- ═══════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════ -->
+  <FAQs
+    title="IPTV Smarters Pro on Firestick — Frequently Asked Questions"
+    subtitle="Everything you need to know about installing and using IPTV Smarters Pro on Amazon Firestick."
+    columns={1}
+    items={[
+      {
+        title: 'Can I install IPTV Smarters Pro directly from the Amazon App Store?',
+        description:
+          'IPTV Smarters Pro is not listed on the Amazon App Store, so it cannot be installed directly. You must sideload it using the Downloader app — which IS free on the App Store. The process takes under 10 minutes and requires no technical experience. Follow the steps above exactly.',
+      },
+      {
+        title: 'Is it safe to sideload IPTV Smarters Pro on my Firestick?',
+        description:
+          'Yes. Sideloading is a built-in Amazon feature designed specifically to allow apps not in their store. Enabling "Apps from Unknown Sources" does NOT void your warranty or harm your device. Always download the APK from the official IPTV Smarters Pro website to ensure you get the genuine, safe version of the app.',
+      },
+      {
+        title: 'Do I need to jailbreak my Firestick?',
+        description:
+          'No jailbreak is needed. Amazon Firestick natively supports sideloading via the Developer Options menu. This is completely different from jailbreaking — it is an official Amazon feature that millions of users use safely every day.',
+      },
+      {
+        title: 'What internet speed do I need for IPTV Smarters Pro on Firestick?',
+        description:
+          'For SD quality: 5 Mbps minimum. For Full HD: 10 Mbps. For 4K Ultra HD: 25 Mbps. For multiple simultaneous streams: add 10–25 Mbps per additional stream. We recommend a 5GHz Wi-Fi connection or an Ethernet adapter for the most stable IPTV Smarters Pro experience on Firestick.',
+      },
+      {
+        title: 'How many devices can I use with one IPTV Smarters PRO subscription?',
+        description:
+          'Each IPTV Smarters PRO plan supports up to 3 simultaneous connections by default. You can install IPTV Smarters Pro on as many devices as you like (Firestick, Android, iOS, Smart TV, etc.) but only 3 streams can play at the same time. Multi-connection plans are also available.',
+      },
+      {
+        title: 'What is the difference between M3U and Xtream Codes login in IPTV Smarters Pro?',
+        description:
+          'Both methods connect your IPTV Smarters PRO subscription to the app. Xtream Codes API (Server URL + Username + Password) is the recommended method — it is faster, supports EPG automatically, and allows VOD/Catch-up TV. M3U URL is a simpler playlist format that works but has fewer features. IPTV Smarters PRO provides both options.',
+      },
+    ]}
+  />
+
+  <!-- ═══════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════ -->
+  <CallToAction
+    title="Ready to Stream on Your Firestick?"
+    subtitle="Get your IPTV Smarters PRO subscription today and be watching 20,000+ live channels in 4K on your Firestick within 10 minutes. Instant activation. 7-day money-back guarantee."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get IPTV Smarters PRO Now',
+        href: '/pricing',
+        icon: 'tabler:rocket',
+      },
+      {
+        variant: 'secondary',
+        text: 'Try Free 24h Test Line',
+        href: '/free-trial',
+      },
+    ]}
+  />
+</Layout>
